@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeoQuiz - Quiz</title>
+<link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+<div class="glow"></div>
+<div class="glow"></div>
+
+<header>
+  <div class="logo">NeoQuiz</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="#">Leaderboard</a>
+    <a href="#">About</a>
+  </nav>
+</header>
+
+<div class="quiz-container">
+  <h2>General Knowledge Quiz</h2>
+  <div class="question" id="question">Question text here</div>
+
+  <div class="options">
+    <div class="option" data-answer="A">Option A</div>
+    <div class="option" data-answer="B">Option B</div>
+    <div class="option" data-answer="C">Option C</div>
+    <div class="option" data-answer="D">Option D</div>
+  </div>
+
+  <button class="btn" id="submitBtn">Submit Answer</button>
+  <div id="feedback" style="margin-top:1rem; font-weight:600;"></div>
+</div>
+
+<footer>
+  © 2025 NeoQuiz — The Future of Learning
+</footer>
+
+<script src="quiz.js"></script>
+</body>
+</html>
 
