@@ -5,54 +5,301 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NeoQuiz - The Future of Learning</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Background Glows -->
   <div class="glow"></div>
   <div class="glow"></div>
 
+  <!-- Navigation Header -->
   <header>
-    <div class="logo">NeoQuiz</div>
+    <div class="logo" onclick="app.nav('home')">NeoQuiz</div>
     <nav>
-      <a href="">Home</a>
-      <a href="#">Quizzes</a>
-      <a href="#">Leaderboard</a>
-      <a href="about.html">About</a>
-      <a href="login.html">Register</a>
+      <a href="#" onclick="app.nav('home')">Home</a>
+      <a href="#" onclick="app.nav('categories')">Categories</a>
+      <a href="#" onclick="app.nav('leaderboard')">Leaderboard</a>
+      <a href="#" onclick="app.nav('login')">Login/Sign Up</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Challenge Your Mind, <br> Master Every Topic.</h1>
-      <p>Join <strong>NeoQuiz</strong> — a futuristic platform where knowledge meets competition. 
-      Test your skills, earn badges, and climb the global leaderboard.</p>
-      <a href="catagory.html" class="btn">Start Quiz</a>
-    </div>
-    <div class="hero-image">
-      <img src="https://cdn-icons-png.flaticon.com/512/4335/4335533.png" alt="Quiz Illustration" />
-    </div>
-  </section>
+  <main>
+    <!-- VIEW: HOME -->
+   <!-- VIEW: HOME (Taller Version) -->
+    <section id="view-home" class="active-view">
+      
+      <!-- 1. Hero Section -->
+      <div class="hero">
+        <div class="hero-text">
+          <h1>Challenge Your Mind, <br> Master Every Topic.</h1>
+          <p>Join <strong>NeoQuiz</strong> — the ultimate platform for students. Test your skills in Freshman courses, High School subjects, and Logic puzzles.</p>
+          <button class="btn" onclick="app.nav('categories')">Start Quiz</button>
+        </div>
+        <div class="hero-image">
+          <img src="https://cdn-icons-png.flaticon.com/512/4335/4335533.png" alt="Quiz Illustration" />
+        </div>
+      </div>
 
-  <section class="features">
-    <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Brain Icon">
-      <h3>Diverse Categories</h3>
-      <p>Explore science, tech, art, and more. Every quiz is crafted to expand your mind and test your limits.</p>
-    </div>
-    <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Leaderboard Icon">
-      <h3>Global Leaderboard</h3>
-      <p>Compete with players worldwide. Track your progress and earn your spot among the quiz masters.</p>
-    </div>
-    <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/197/197549.png" alt="Ethiopia Flag" />
-      <h3>Instant Feedback</h3>
-      <p>Get real-time feedback on every answer and improve your skills with smart analytics.</p>
-    </div>
-  </section>
+      <!-- 2. Features Section -->
+      <div class="features">
+        <div class="feature-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Brain">
+          <h3>Diverse Categories</h3>
+          <p>From University courses to High School grades.</p>
+        </div>
+        <div class="feature-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Leaderboard">
+          <h3>Global Leaderboard</h3>
+          <p>Compete with students nationwide.</p>
+        </div>
+        <div class="feature-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/197/197549.png" alt="Instant">
+          <h3>Instant Analytics</h3>
+          <p>Track your GPA and quiz performance.</p>
+        </div>
+      </div>
+
+      <!-- 3. NEW: Stats Counter -->
+      <div class="stats-container">
+        <div class="stat-item">
+          <h2>10,00+</h2>
+          <p>Practice Questions</p>
+        </div>
+        <div class="stat-item">
+          <h2>5,00+</h2>
+          <p>Active Students</p>
+        </div>
+        <div class="stat-item">
+          <h2>30+</h2>
+          <p>Course Subjects</p>
+        </div>
+      </div>
+
+      <!-- 4. NEW: How It Works -->
+      <div class="content-section">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps-grid">
+          <div class="step-card">
+            <h1>01</h1>
+            <h3>Select Category</h3>
+            <p>Choose between Freshman University, High School, or General Knowledge.</p>
+          </div>
+          <div class="step-card">
+            <h1>02</h1>
+            <h3>Choose Topic</h3>
+            <p>Pick your specific grade level or semester course to focus your study.</p>
+          </div>
+          <div class="step-card">
+            <h1>03</h1>
+            <h3>Ace the Quiz</h3>
+            <p>Answer questions, get instant feedback, and climb the leaderboard.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. NEW: Reviews -->
+      <div class="content-section alt-bg">
+        <h2 class="section-title">Student Reviews</h2>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <p>"NeoQuiz helped me pass my Logic exam! The questions are exactly like the real test."</p>
+            <h4>- Abebe K., AAU</h4>
+          </div>
+          <div class="review-card">
+            <p>"I love the High School section. It helps me prepare for entrance exams."</p>
+            <h4>- Sara M., Grade 12</h4>
+          </div>
+          <div class="review-card">
+            <p>"The interface is beautiful and the night mode allows me to study late."</p>
+            <h4>- Dawit T., ASTU</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. NEW: Bottom CTA -->
+      <div class="cta-section">
+        <h2>Ready to top the Leaderboard?</h2>
+        <p>Join thousands of students improving their grades today.</p>
+        <button class="btn" onclick="app.nav('login')">Create Free Account</button>
+      </div>
+
+    </section>
+
+    <!-- VIEW: LOGIN / SIGNUP -->
+    <section id="view-login" class="hidden-view">
+      <div class="login-container">
+        <div class="toggle-buttons">
+          <button id="loginBtn" class="active">Login</button>
+          <button id="signupBtn">Sign Up</button>
+        </div>
+      
+        <!-- Login Form -->
+        <form id="loginForm" class="active">
+          <input type="email" id="loginEmail" placeholder="Email (demo@neoquiz.com)" required>
+          <input type="password" id="loginPassword" placeholder="Password (demo123)" required>
+          <button type="submit" class="btn">Login</button>
+          <div id="loginError" class="error"></div>
+          <a href="#" class="link">Forgot Password?</a>
+          <a href="#" class="link" onclick="app.nav('categories')">Continue as Guest</a>
+        </form>
+      
+        <!-- Sign Up Form -->
+        <form id="signupForm">
+          <input type="text" id="signupName" placeholder="Full Name" required>
+          <input type="email" id="signupEmail" placeholder="Email" required>
+          <input type="password" id="signupPassword" placeholder="Password" required>
+          <input type="password" id="signupConfirm" placeholder="Confirm Password" required>
+          <button type="submit" class="btn">Sign Up</button>
+          <div id="signupError" class="error"></div>
+          <a href="#" class="link" onclick="app.nav('categories')">Continue as Guest</a>
+        </form>
+      </div>
+    </section>
+
+    <!-- VIEW: CATEGORIES -->
+    <section id="view-categories" class="hidden-view category-section">
+      <h1 class="category-title">Choose Your Category</h1>
+      <div class="category-grid">
+        <div class="category-box" onclick="app.nav('semesters')">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="GK">
+          <h3>Freshman</h3>
+          <p>Test your awareness about common courses!</p>
+        </div>
+        <div class="category-box" onclick="app.nav('quiz')">
+          <img src="https://cdn-icons-png.flaticon.com/512/2942/2942924.png" alt="Science">
+          <h3>High School</h3>
+          <p>Explore the mysteries of every subject</p>
+        </div>
+        <div class="category-box" onclick="app.nav('quiz')">
+          <img src="https://cdn-icons-png.flaticon.com/512/2920/2920223.png" alt="Math">
+          <h3>Mathematics</h3>
+          <p>Challenge your problem-solving skills.</p>
+        </div>
+        <div class="category-box" onclick="app.nav('quiz')">
+          <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png" alt="Tech">
+          <h3>Technology</h3>
+          <p>Stay sharp with future-ready knowledge.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW: SEMESTERS -->
+    <section id="view-semesters" class="hidden-view category-section">
+      <button class="back-btn" onclick="app.nav('categories')">← Back</button>
+      <h1 class="category-title">General Knowledge – Choose Semester</h1>
+      <div class="category-grid">
+        <div class="category-box" onclick="app.nav('courses')">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Sem 1">
+          <h3>Semester 1</h3>
+          <p>Start with basic GK concepts.</p>
+        </div>
+        <div class="category-box" onclick="app.nav('courses')">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Sem 2">
+          <h3>Semester 2</h3>
+          <p>Level up with advanced GK topics.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW: COURSES -->
+    <!-- VIEW: SEMESTERS (Clicking one opens the courses below) -->
+    <section id="view-semesters" class="hidden-view category-section">
+      <button class="back-btn" onclick="app.nav('categories')">← Back to Categories</button>
+      <h1 class="category-title">Choose Semester</h1>
+      <div class="category-grid">
+        <!-- Semester 1 Button -->
+        <div class="category-box" onclick="app.nav('courses')">
+          <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="Sem 1">
+          <h3>Semester 1</h3>
+          <p>Common Freshman Courses</p>
+        </div>
+        
+        <!-- Semester 2 Button -->
+        <div class="category-box" onclick="app.nav('courses')">
+          <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="Sem 2">
+          <h3>Semester 2</h3>
+          <p>Advanced Common Courses</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW: COURSES (The 7 Specific Courses) -->
+    <section id="view-courses" class="hidden-view category-section">
+      <button class="back-btn" onclick="app.nav('semesters')">← Back to Semesters</button>
+      <h1 class="category-title">Select Course</h1>
+      
+      <div class="category-grid">
+        <!-- Course 1 -->
+        <div class="category-box" onclick="app.nav('quiz')">
+          <img src="https://cdn-icons-png.flaticon.com/512/1541/1541416.png" alt="Logic">
+          <h3>Logic & Critical Thinking</h3>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="category-box" onclick="app.nav('quiz')">
+          <img src="https://cdn-icons-png.flaticon.com/512/3069/3069172.png" alt="Psychology">
+          <h3>General Psychology</h3>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="category-box" onclick="app.nav('quiz')">
+          <img src="https://cdn-icons-png.flaticon.com/512/4021/4021693.png" alt="Math">
+          <h3>Mathematics</h3>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="category-box" onclick="app.nav('quiz')">
+          <img src="https://cdn-icons-png.flaticon.com/512/3209/3209265.png" alt="English">
+          <h3>Communicative English</h3>
+        </div>
+
+        <!-- Course 5 -->
+        <div class="category-box" onclick="app.nav('quiz')">
+          <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="Geography">
+          <h3>Geography</h3>
+        </div>
+
+        <!-- Course 6 -->
+        <div class="category-box" onclick="app.nav('quiz')">
+          <img src="https://cdn-icons-png.flaticon.com/512/2082/2082091.png" alt="Physics">
+          <h3>General Physics</h3>
+        </div>
+
+        <!-- Course 7 -->
+        <div class="category-box" onclick="app.nav('quiz')">
+          <img src="https://cdn-icons-png.flaticon.com/512/2166/2166820.png" alt="PE">
+          <h3>Physical Fitness</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW: QUIZ -->
+    <section id="view-quiz" class="hidden-view">
+      <button class="back-btn" onclick="app.nav('courses')">← Quit Quiz</button>
+      <div class="quiz-container">
+        <h2>General Knowledge Quiz</h2>
+        <div class="question" id="question">Question text here</div>
+      
+        <div class="options">
+          <div class="option" data-index="0">Option A</div>
+          <div class="option" data-index="1">Option B</div>
+          <div class="option" data-index="2">Option C</div>
+          <div class="option" data-index="3">Option D</div>
+        </div>
+      
+        <button class="btn" id="submitAnswerBtn">Submit Answer</button>
+        <div id="feedback" style="margin-top:1rem; font-weight:600; min-height: 24px;"></div>
+      </div>
+    </section>
+
+  </main>
 
   <footer>
     © 2025 NeoQuiz — The Future of Learning
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
