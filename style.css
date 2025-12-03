@@ -484,4 +484,145 @@ footer {
   font-size: 1.2rem;
   opacity: 0.8;
   margin-bottom: 2rem;
+}/* ===============================
+   GPA CALCULATOR STYLES
+=============================== */
+.calc-container {
+  max-width: 800px;
+  margin: 4rem auto;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+}
+
+/* Input Row */
+.calc-inputs {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.calc-inputs select {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 50px;
+  padding: 0 1rem;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Table Styles */
+.course-list-container {
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.course-table th {
+  color: #00ffff;
+  padding: 1rem;
+  border-bottom: 2px solid rgba(0, 255, 255, 0.3);
+}
+
+.course-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.delete-btn:hover { text-decoration: underline; }
+
+/* Result Display */
+.gpa-result {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid #00ffff;
+}
+
+.gpa-result h3 { opacity: 0.8; margin-bottom: 0.5rem; }
+
+.gpa-result h1 {
+  font-size: 4rem;
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff;
+  margin-bottom: 1rem;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 600px) {
+  .calc-inputs {
+    grid-template-columns: 1fr; /* Stack inputs on mobile */
+  }
+}
+/* ===============================
+   GPA CALCULATOR - QUICK SELECT
+=============================== */
+.rec-container {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sem-toggles {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sem-btn {
+  background: transparent;
+  border: 1px solid rgba(0,255,255,0.3);
+  color: rgba(255,255,255,0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sem-btn:hover, .sem-btn.active {
+  background: rgba(0,255,255,0.1);
+  border-color: #00ffff;
+  color: #00ffff;
+}
+
+.course-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.chip {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chip:hover {
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 10px #00ffff;
 }
